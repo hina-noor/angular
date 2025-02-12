@@ -32,14 +32,16 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { firebaseConfig } from './firebase';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';  // Import Firebase configuration from your firebase.ts
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,36 @@
-<p>home works!</p>
+<header>
+    <h1 style="color:rgb(116, 157, 194);">Your one-stop shop for trendy fashion</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Search for products..." class="search-bar">
+        <button class="search-btn" style="background-color: white;">🔍</button>
+    </div>
+</header>
+
+
+
+
+
+<div class="container">
+    <div class="category" *ngFor="let category of productCategories | keyvalue">
+        <h2>{{ category.key }}</h2>
+        
+        <!-- Ensure the slider container properly wraps product cards -->
+        <div class="slider-container">
+            <div class="product-slider">
+                <div class="product-card" *ngFor="let product of category.value">
+                    <img [src]="product.image" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                    <p class="price">${{ product.price }}</p>
+                    <!-- <button (click)="addToCart(product)">Add to Cart</button> -->
+                    <button>Add to Cart</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  
